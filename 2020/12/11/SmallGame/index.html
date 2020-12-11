@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		
+<title>启明星工作室秋季结业作品:2048小游戏-乔越博客</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" type="image/x-icon" href="/image/favicon.ico">
+
+
+<meta name="keywords" content="C++,">
+<meta name="description" content="">
+
+
+<script src="/js/jquery.min.js"></script>
+
+
+	<meta name="generator" content="Hexo 5.2.0"></head>
+
+	<body>
+		
+<link rel="stylesheet" href="/css/page.css">
+
+
+<link rel="stylesheet" href="/css/page_cente.css">
+
+
+<link rel="stylesheet" href="/css/atom-one-dark.css">
+
+
+<link rel="stylesheet" href="/css/header.css">
+
+<div class="header">
+	<div class="header-top">
+		<div class="h-left">
+			<a href="/">
+				<img src="/image/logo.png" alt="">
+			</a>
+		</div>
+		<div class="h-right">
+			<ul>
+				
+				
+				<li>
+					<a href="/">HOME</a>
+					<span class="dot"></span>
+				</li>
+				
+				
+				
+				<li>
+					<a href="/archives">ARCHIVE</a>
+					<span class="dot"></span>
+				</li>
+				
+				
+				
+				<li>
+					<a href="/categories">CATEGORIES</a>
+					<span class="dot"></span>
+				</li>
+				
+				
+				
+				<li>
+					<a href="/tags">TAGS</a>
+					<span class="dot"></span>
+				</li>
+				
+				
+				
+				<li>
+					<a href="/links">LINKS</a>
+					<span class="dot"></span>
+				</li>
+				
+				
+				
+				<li>
+					<a href="/about">ABOUT</a>
+					<span class="dot"></span>
+				</li>
+				
+				
+			</ul>
+		</div>
+		<div class="h-right-close">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+				<path fill="none" d="M0 0h24v24H0z" />
+				<path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z" fill="rgba(68,68,68,1)" />
+			</svg>
+		</div>
+	</div>
+</div>
+<div class="sidebar">
+    <div class="topo">
+        <h2>CHANGEQ</h2>
+    </div>
+    <ul>
+        
+        <li>
+            <a href="/">HOME</a>
+        </li>
+        
+        <li>
+            <a href="/archives">ARCHIVE</a>
+        </li>
+        
+        <li>
+            <a href="/categories">CATEGORIES</a>
+        </li>
+        
+        <li>
+            <a href="/tags">TAGS</a>
+        </li>
+        
+        <li>
+            <a href="/links">LINKS</a>
+        </li>
+        
+        <li>
+            <a href="/about">ABOUT</a>
+        </li>
+        
+    </ul>
+    <div class="my_foot">
+        
+        <a target="_blank" rel="noopener" href="https://github.com/qiaobug">
+            <img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
+        </a>
+        
+    </div>
+</div>
+<div class='shelter'
+    style='cursor: pointer;display: none; position: fixed;left: 0;top: 0; right: 0;bottom: 0;background-color: #333;opacity:0.5;z-index: 108;'>
+</div>
+<style>
+    .sidebar {
+        width: 0;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: #fff;
+        z-index: 999;
+        text-align: center;
+        box-shadow: -6px 0 20px rgba(98, 94, 94, .815)
+    }
+
+    .topo {
+        width: 100%;
+        height: 200px;
+        background: url(https://api.ixiaowai.cn/gqapi/gqapi.php) no-repeat;
+        background-size: 100% 100%;
+        position: relative;
+        display: flex;
+        align-items: flex-end
+    }
+
+    .topo h2 {
+        color: #fff;
+        z-index: 1;
+        position: relative;
+        margin: 0 0 10px 10px;
+        font-size: 1.2em;
+        box-sizing: border-box
+    }
+
+    .topo:before {
+        content: '';
+        background-image: url(/image/pattern.png);
+        background-repeat: repeat;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 1
+    }
+
+    .sidebar ul {
+        width: 100%;
+        margin-top: 50px
+    }
+
+    .sidebar ul li {
+        height: 50px;
+        list-style: none;
+        font-size: 1.2em;
+        text-align: right;
+        margin-right: 10px
+    }
+
+    .sidebar ul li a {
+        display: grid;
+        color: #5d606a;
+        text-overflow: ellipsis;
+        width: 100%;
+        text-decoration: none
+    }
+
+    .my_foot {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        position: absolute;
+        bottom: 0
+    }
+
+    .my_foot a {
+        text-decoration: none;
+        margin-right: 10px;
+        display: inline-block
+    }
+
+    .my_foot a img {
+        width: 30px;
+        height: 30px
+    }
+</style>
+
+<script>
+    $(function () { $('.h-right-close>svg').click(function () { $('.sidebar').animate({ width: "66%" }, 500); $('.shelter').fadeIn("slow") }); $('.shelter').click(function (e) { $('.sidebar').animate({ width: "0" }, 500); $('.shelter').fadeOut("slow") }) })
+</script>
+<script>
+	$(function () { $(window).scroll(function () { if ($(document).scrollTop() > 100) { $(".header-top").removeClass("header-move2"); $('.header-top').addClass('header-move1') } else { $(".header-top").removeClass("header-move1"); $('.header-top').addClass('header-move2') } }) });
+</script>
+<div class="header-bg ">
+    <div class="bg-content">
+        <ul class="tag">
+            
+            
+            <li><a href="/tags/C++">C++</a></li>
+            
+            
+        </ul>
+        <h1>启明星工作室秋季结业作品:2048小游戏</h1>
+        <div class="article-info">
+            <div class="article-author">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                    <g>
+                        <path fill="#12183A"
+                            d="M6.187 15.265A6.47 6.47 0 0 0 10 16.5a6.47 6.47 0 0 0 3.813-1.235A4.99 4.99 0 0 0 10 13.5a4.99 4.99 0 0 0-3.813 1.765zM5.082 14.25A6.485 6.485 0 0 1 10 12c1.965 0 3.726.872 4.918 2.25a6.5 6.5 0 1 0-9.836 0zM10 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0-1.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z">
+                        </path>
+                    </g>
+                </svg>
+                
+                <span> <a href="">CHANGEQ</a></span>
+                <p>2020-12-11 13:12:50</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="article-content">
+    <div id="article" class="content">
+        <h1 id="一、小游戏简介"><a href="#一、小游戏简介" class="headerlink" title="一、小游戏简介"></a>一、小游戏简介</h1><h2 id="1、起源"><a href="#1、起源" class="headerlink" title="1、起源"></a>1、起源</h2><p>&emsp;&emsp;2048小游戏最早于2014年3月20日发行。原版的2048最早于GitHub上发行，后被移植到了各个平台。是基于《1024》开发的新型数字游戏</p>
+<h2 id="2、玩法"><a href="#2、玩法" class="headerlink" title="2、玩法"></a>2、玩法</h2><p>&emsp;&emsp;这款游戏的玩法很简单，每次可以选择上下左右滑动，每滑动一次，所有的数字方块都会往滑动的方向靠拢，系统也会在空白的地方乱数出现一个数字方块，相同数字的方块在靠拢、相撞时会相加。不断的叠加最终拼凑出2048这个数字就算成功。</p>
+<h1 id="二、编程思路"><a href="#二、编程思路" class="headerlink" title="二、编程思路"></a>二、编程思路</h1><p><img src="https://img-blog.csdnimg.cn/img_convert/92d01392c0024d581a243e9b5145b2f4.png" alt="未命名文件.jpg"></p>
+<h1 id="三、各个功能的实现"><a href="#三、各个功能的实现" class="headerlink" title="三、各个功能的实现"></a>三、各个功能的实现</h1><h2 id="1、图片的制作"><a href="#1、图片的制作" class="headerlink" title="1、图片的制作"></a>1、图片的制作</h2><p>每个正方形数字图片的大小都为60 * 60像素<br>最后游戏窗体的大小为240 * 300像素、</p>
+<h2 id="2、创建2048-h头文件"><a href="#2、创建2048-h头文件" class="headerlink" title="2、创建2048.h头文件"></a>2、创建2048.h头文件</h2><p>&emsp;&emsp;由于是使用分文件编写的方式(主要是所有函数都写在一个文件里面实在是不方便看)，所以需要创建一个头文件来声明我们需要使用到的库、变量和自定义函数，代码如下：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">ifndef</span> SMALLGAME</span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SMALLGAME</span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;cstdio&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;conio.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;cstdlib&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;graphics.h&gt; //用到的第一个非C++自带库---&gt;Easyz的图片库</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;ctime&gt;</span></span><br><span class="hljs-comment">//由于分文件编写的</span><br><span class="hljs-comment">//所以注意我们定义的变量都要使用extern类型</span><br><span class="hljs-keyword">extern</span> IMAGE img[<span class="hljs-number">15</span>];<span class="hljs-comment">//存放的是我们的15张图片</span><br><span class="hljs-keyword">extern</span> <span class="hljs-keyword">int</span> <span class="hljs-built_in">map</span>[<span class="hljs-number">4</span>][<span class="hljs-number">4</span>];<span class="hljs-comment">//4*4的地图</span><br><span class="hljs-keyword">extern</span> <span class="hljs-keyword">int</span> Imagine_number[<span class="hljs-number">12</span>];<br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Loadimage</span><span class="hljs-params">()</span></span>;<span class="hljs-comment">//加载所有的图片</span><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">DrawMap</span><span class="hljs-params">()</span></span>;<span class="hljs-comment">//根据二维数组中的数据来贴上相应的图片</span><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">KeyDown</span><span class="hljs-params">()</span></span>;<span class="hljs-comment">//模拟按键</span><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">RandNum</span><span class="hljs-params">()</span></span>;<span class="hljs-comment">//在地图中随机产生数据</span><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">MoveRight</span><span class="hljs-params">()</span></span>;<span class="hljs-comment">//向右走</span><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">MoveLeft</span><span class="hljs-params">()</span></span>;<span class="hljs-comment">//向左走</span><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">MoveUp</span><span class="hljs-params">()</span></span>;<span class="hljs-comment">//向上走</span><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">MoveDown</span><span class="hljs-params">()</span></span>;<span class="hljs-comment">//向下走</span><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">GAMEOVER</span><span class="hljs-params">()</span></span>;<span class="hljs-comment">//游戏结束</span><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">PLAYERWIN</span><span class="hljs-params">()</span></span>;<span class="hljs-comment">//游戏获胜</span><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">ScanMap2</span><span class="hljs-params">()</span></span>;<span class="hljs-comment">//扫描判断是否获胜</span><br><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">ScanMap</span><span class="hljs-params">()</span></span>;<span class="hljs-comment">//扫描判断是否游戏结束</span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span><br></code></pre></td></tr></table></figure>
+<h2 id="3、加载图片资源"><a href="#3、加载图片资源" class="headerlink" title="3、加载图片资源"></a>3、加载图片资源</h2><p>Easyx开发的图片库可以进行图片的操作，在使用图片之前，需要加载要使用的图片，一共需要加载15张图，所以直接编写一个加载图片的函数利用循环加载即可，代码如下：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&quot;2048.h&quot;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> _CRT_SECURE_NO_WARNINGS <span class="hljs-comment">//去除内扩增的影响</span></span><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Loadimage</span><span class="hljs-params">()</span></span>&#123;  <span class="hljs-comment">//加载所有的图片</span><br>	<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">12</span>; i++) &#123;<br>		<span class="hljs-keyword">char</span> FileName[<span class="hljs-number">200</span>]=&#123;&#125;;<br>		<span class="hljs-built_in">sprintf</span>(FileName,<span class="hljs-string">&quot;%d.jpg&quot;</span>,Imagine_number[i]);<br>		loadimage(img + i,FileName);<br>	&#125;<br>	loadimage(img + <span class="hljs-number">12</span>, <span class="hljs-string">&quot;111.jpg&quot;</span>);<br>	loadimage(img + <span class="hljs-number">13</span>, <span class="hljs-string">&quot;12345.jpg&quot;</span>);<br>	loadimage(img + <span class="hljs-number">14</span>, <span class="hljs-string">&quot;444.jpg&quot;</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>注意：sprintf具有不安全性，如果将一个长度大于原定字符数组大小的字符串存放进字符数组，就会发生越界的现象。可以使用snprintf替换sprintf</p>
+<h2 id="4、绘制地图"><a href="#4、绘制地图" class="headerlink" title="4、绘制地图"></a>4、绘制地图</h2><p>遍历二维数组中的数据，根据二维数组中每个元素的数据来判断应该在某个位置贴上对应的图片，注意需要根据图片的尺寸来计算每个点的x,y坐标。<br>代码如下：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&quot;2048.h&quot;</span></span><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">DrawMap</span><span class="hljs-params">()</span></span>&#123;<span class="hljs-comment">//画地图</span><br>	setbkcolor(RGB(<span class="hljs-number">244</span>,<span class="hljs-number">215</span>,<span class="hljs-number">215</span>));  <span class="hljs-comment">//设置窗体背景颜色</span><br>	cleardevice();<span class="hljs-comment">//更新一遍窗体</span><br>	settextcolor(WHITE);<span class="hljs-comment">//设置文本颜色</span><br>	settextstyle(<span class="hljs-number">30</span>,<span class="hljs-number">0</span>,<span class="hljs-string">&quot;圆体&quot;</span>);<span class="hljs-comment">//字体大小</span><br>	outtextxy(<span class="hljs-number">50</span>,<span class="hljs-number">10</span>,<span class="hljs-string">&quot;2048小游戏&quot;</span>);<span class="hljs-comment">//文字内容</span><br>	<span class="hljs-keyword">int</span> x,y,k;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i &lt; <span class="hljs-number">4</span>;i++)&#123;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>;j &lt; <span class="hljs-number">4</span>;j++)&#123;<br>			x=<span class="hljs-number">60</span>*j;<span class="hljs-comment">//列</span><br>			y=<span class="hljs-number">60</span>*i+<span class="hljs-number">60</span>;<span class="hljs-comment">//行</span><br>			<span class="hljs-comment">//printf(&quot;%d %d\n&quot;,x,y);</span><br>			<span class="hljs-keyword">for</span>(k = <span class="hljs-number">0</span>;k &lt; <span class="hljs-number">12</span>;k++)&#123;<span class="hljs-comment">//遍历12张图片</span><br>				<span class="hljs-keyword">if</span>(Imagine_number[k] == <span class="hljs-built_in">map</span>[i][j])<br>				<span class="hljs-comment">//判断应该贴哪一张图片</span><br>					<span class="hljs-keyword">break</span>;<span class="hljs-comment">//退出循环</span><br>			&#125;<br>			putimage(x,y,img+k);<span class="hljs-comment">//在(x,y)的位置贴上第k张图</span><br>		&#125;<br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="5、在二维数组中产生随机数"><a href="#5、在二维数组中产生随机数" class="headerlink" title="5、在二维数组中产生随机数"></a>5、在二维数组中产生随机数</h2><p>C++中产生随机数需要使用到随机数函数srand();(包含于cstdlib库中)<br>用法：srand((unsigned int)随机数种子(NULL))<br>若随机数种子保持不变，那么所生成的随机数也不会改变（感觉没说清楚，只能自行理解了）。故此我们一般使用电脑的系统时间作为随机数种子，也就是:</p>
+<figure class="highlight isbl"><table><tr><td class="code"><pre><code class="hljs isbl"><span class="hljs-function"><span class="hljs-title">srand</span>((<span class="hljs-variable">unsigned</span> <span class="hljs-variable">int</span>)<span class="hljs-title"><span class="hljs-built_in">time</span></span>(<span class="hljs-variable"><span class="hljs-literal">NULL</span></span>));</span><br></code></pre></td></tr></table></figure>
+<p>由于这里使用到了系统时间，所以需要包含C++的系统库—-&gt;<strong>ctime</strong></p>
+<p>在2048小游戏中，每次产生的随机数为2或4。<br>那么如何产生这种随机数？可以这么做👇</p>
+<figure class="highlight matlab"><table><tr><td class="code"><pre><code class="hljs matlab">temp=(<span class="hljs-built_in">rand</span>()<span class="hljs-comment">%3) * 2;</span><br>注意:<span class="hljs-built_in">rand</span>() <span class="hljs-comment">% n得到的就是[0,n)的数据</span><br></code></pre></td></tr></table></figure>
+<p>&emsp;&emsp;那么不可避免地会生成0这么一个随机数，但我们只需要在生成后判断一次即可，如果是0，那么我们就在其他的区域内继续生成一个随机数。<br>代码如下：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&quot;2048.h&quot;</span></span><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">RandNum</span><span class="hljs-params">()</span></span>&#123;<span class="hljs-comment">//在地图中随机产生数字</span><br>	srand((<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span>)time(<span class="hljs-literal">NULL</span>));<br>	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i &lt; <span class="hljs-number">4</span>;i++)&#123;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>;j &lt; <span class="hljs-number">4</span>;j++)&#123;<br>			<span class="hljs-keyword">if</span>(<span class="hljs-built_in">map</span>[i][j] == <span class="hljs-number">0</span>)&#123;<br>				<span class="hljs-built_in">map</span>[i][j] = (rand()%<span class="hljs-number">3</span>)*<span class="hljs-number">2</span>;<br>				<span class="hljs-keyword">if</span>(<span class="hljs-built_in">map</span>[i][j] == <span class="hljs-number">0</span>) <span class="hljs-keyword">continue</span>;  <span class="hljs-comment">//如果产生的随机数为0  那么就在其他的区域内继续产生随机数</span><br>				<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>			&#125;<br>		&#125;<br>	&#125;<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="6、按键操作"><a href="#6、按键操作" class="headerlink" title="6、按键操作"></a>6、按键操作</h2><h3 id="Ⅰ、数的合并操作"><a href="#Ⅰ、数的合并操作" class="headerlink" title="Ⅰ、数的合并操作"></a>Ⅰ、数的合并操作</h3><p>&emsp;&emsp;在上下左右的移动过程中，如果移动路径上有可以合并的数，按照规则我们需要进行合并操作；</p>
+<h3 id="Ⅱ、数的移动"><a href="#Ⅱ、数的移动" class="headerlink" title="Ⅱ、数的移动"></a>Ⅱ、数的移动</h3><p>&emsp;&emsp;在移动的过程中，如果某个方块在移动路径上没有数字方块，那么我们就需要对该方块进行移动操作；<br> <figure class="highlight makefile"><table><tr><td class="code"><pre><code class="hljs makefile">不同方向上的合并和移动操作的代码是有些许不同的，但是其思想都是一样的<br><span class="hljs-section">下面就以按下右键向右移动为例:</span><br></code></pre></td></tr></table></figure><br> <figure class="highlight cpp"><table><tr><td class="code"><pre><code class="hljs cpp"> <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&quot;2048.h&quot;</span></span><br> <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">MoveRight</span><span class="hljs-params">()</span></span>&#123;<br>	<span class="hljs-keyword">bool</span> flag = <span class="hljs-literal">false</span>;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i &lt; <span class="hljs-number">4</span>;i++)&#123;  <span class="hljs-comment">//判断是否可以合并</span><br>		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">3</span>;j &gt;= <span class="hljs-number">0</span>;j--)&#123;  <br>			<span class="hljs-keyword">int</span> k = j - <span class="hljs-number">1</span>;<span class="hljs-comment">//取当前元素的前一个元素</span><br>			<span class="hljs-keyword">int</span> NowKey = <span class="hljs-built_in">map</span>[i][j];<span class="hljs-comment">//取当前的元素</span><br>			<span class="hljs-keyword">if</span>(NowKey != <span class="hljs-number">0</span>)&#123; <span class="hljs-comment">// 等于0的时候再去判断是没有意义的</span><br>				<span class="hljs-keyword">while</span>(k &gt;= <span class="hljs-number">0</span>)&#123;  <span class="hljs-comment">//列指针移动</span><br>					<span class="hljs-keyword">int</span> NextKey = <span class="hljs-built_in">map</span>[i][k];<span class="hljs-comment">//取当前元素的下一个元素</span><br>					<span class="hljs-keyword">if</span>(NextKey != <span class="hljs-number">0</span>)&#123; <span class="hljs-comment">//如果下一个块已经有数据</span><br>						<span class="hljs-keyword">if</span>(NextKey == NowKey)&#123;  <span class="hljs-comment">//如果下一块和当前块的数据是相同的</span><br>							flag = <span class="hljs-literal">true</span>;<br>							<span class="hljs-built_in">map</span>[i][j]*=<span class="hljs-number">2</span>;<span class="hljs-comment">//那么就进行合并</span><br>							<span class="hljs-built_in">map</span>[i][k] = <span class="hljs-number">0</span>;<br>						&#125;<br>						<span class="hljs-keyword">break</span>;  <span class="hljs-comment">//按照规则，每次只能合并两个方块   </span><br>					&#125;<br>					k--;<br>				&#125;<br>			&#125;<br>		&#125;<br>	&#125;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i&lt;<span class="hljs-number">4</span>;i++)&#123;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">3</span>;j&gt;=<span class="hljs-number">0</span>;j--)&#123;<br>			<span class="hljs-keyword">int</span> nowkey = <span class="hljs-built_in">map</span>[i][j];<br>			<span class="hljs-keyword">if</span>(<span class="hljs-built_in">map</span>[i][j] == <span class="hljs-number">0</span>)&#123;<br>				<span class="hljs-keyword">int</span> k = j - <span class="hljs-number">1</span>;<br>				<span class="hljs-keyword">while</span>(k &gt;= <span class="hljs-number">0</span>)&#123;<br>					<span class="hljs-keyword">int</span> nowkeynext = <span class="hljs-built_in">map</span>[i][k];<br>					<span class="hljs-keyword">if</span>(<span class="hljs-built_in">map</span>[i][k] != <span class="hljs-number">0</span>)&#123;  <span class="hljs-comment">//如果下一个元素不等于0,那么就需要进行合并的操作</span><br>						flag = <span class="hljs-literal">true</span>;<br>						<span class="hljs-built_in">map</span>[i][j]=nowkeynext;<br>						<span class="hljs-built_in">map</span>[i][k]=<span class="hljs-number">0</span>; <span class="hljs-comment">//非0元素移动之后重新置为0</span><br>						<span class="hljs-keyword">break</span>;<br>					&#125;<br>					k--;<span class="hljs-comment">//继续去判断其他的位置</span><br>				&#125;<br>			&#125;<br>			<br>		&#125;<br>	&#125;<br>	<span class="hljs-keyword">if</span> (flag) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>	<span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> <span class="hljs-number">4</span>;<br>&#125;<br></code></pre></td></tr></table></figure><br> &emsp;&emsp;其他三个方向的操作与向右移动类似，不再赘述；此时二维数组中的数据已经发生了更新；（其实如果你不想用图形库的话，可以简单的通过不断的打印二维数组实现类似的效果）更新以后，我们再根据新的数据在对应的位置来贴上对应的图片（可以理解为又覆盖上了一层图片）也就达到了移动的效果。</p>
+<h2 id="7、胜局判断"><a href="#7、胜局判断" class="headerlink" title="7、胜局判断"></a>7、胜局判断</h2><p> &emsp;&emsp;每次按键+打印地图之后对二维数组进行扫描，一旦发现了2048这个数据，那么直接跳到PLAYERWIN()这个函数。<br> <figure class="highlight cpp"><table><tr><td class="code"><pre><code class="hljs cpp">	<span class="hljs-keyword">while</span> (<span class="hljs-number">1</span>) <br>	&#123;<br>		<span class="hljs-keyword">int</span> WINNERCHECK;<br>		KeyDown();<span class="hljs-comment">//按下按键</span><br>		DrawMap();<span class="hljs-comment">//打印一遍地图</span><br>		WINNERCHECK = ScanMap2();<br>		<span class="hljs-keyword">if</span> (WINNERCHECK == <span class="hljs-number">1</span>) <br>		&#123;<br>			putimage(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, img + <span class="hljs-number">13</span>);<span class="hljs-comment">//贴上游戏获胜的图片</span><br>			<span class="hljs-keyword">break</span>; <br>		&#125;<span class="hljs-comment">//游戏获胜</span><br>&#125;<br></code></pre></td></tr></table></figure></p>
+<h2 id="8、败局判断"><a href="#8、败局判断" class="headerlink" title="8、败局判断"></a>8、败局判断</h2><p> &emsp;&emsp;扫描地图，对四个方向尝试移动（只是尝试！没有更新二维数数组中的数据！可以想想该怎么做！），如果有一个方向还可以移动，那么就未达到败局。如果四个方向都已经尝试过且无法移动，那么就已是败局，贴上游戏失败的图片</p>
+<h1 id="四、整体代码"><a href="#四、整体代码" class="headerlink" title="四、整体代码"></a>四、整体代码</h1><p>&emsp;1、头文件</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">ifndef</span> SMALLGAME</span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SMALLGAME</span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;cstdio&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;conio.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;cstdlib&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;graphics.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;ctime&gt;</span></span><br><span class="hljs-keyword">extern</span> IMAGE img[<span class="hljs-number">15</span>];<br><span class="hljs-keyword">extern</span> <span class="hljs-keyword">int</span> <span class="hljs-built_in">map</span>[<span class="hljs-number">4</span>][<span class="hljs-number">4</span>];<br><span class="hljs-keyword">extern</span> <span class="hljs-keyword">int</span> Imagine_number[<span class="hljs-number">12</span>];<br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Loadimage</span><span class="hljs-params">()</span></span>;<span class="hljs-comment">//加载所有的图片</span><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">DrawMap</span><span class="hljs-params">()</span></span>;<span class="hljs-comment">//根据二维数组中的数据来贴上相应的图片</span><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">KeyDown</span><span class="hljs-params">()</span></span>;<span class="hljs-comment">//模拟按键</span><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">RandNum</span><span class="hljs-params">()</span></span>;<span class="hljs-comment">//在地图中随机产生数据</span><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">MoveRight</span><span class="hljs-params">()</span></span>;<span class="hljs-comment">//向右走</span><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">MoveLeft</span><span class="hljs-params">()</span></span>;<span class="hljs-comment">//向左走</span><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">MoveUp</span><span class="hljs-params">()</span></span>;<span class="hljs-comment">//向上走</span><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">MoveDown</span><span class="hljs-params">()</span></span>;<span class="hljs-comment">//向下走</span><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">GAMEOVER</span><span class="hljs-params">()</span></span>;<br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">PLAYERWIN</span><span class="hljs-params">()</span></span>;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">ScanMap1</span><span class="hljs-params">()</span></span>;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">ScanMap2</span><span class="hljs-params">()</span></span>;<br><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">ScanMap</span><span class="hljs-params">()</span></span>;<br><span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span><br></code></pre></td></tr></table></figure>
+<p>&emsp;2、源文件</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&quot;2048.h&quot;</span></span><br><span class="hljs-keyword">int</span> Imagine_number[<span class="hljs-number">12</span>]=&#123;<span class="hljs-number">0</span>,<span class="hljs-number">2</span>,<span class="hljs-number">4</span>,<span class="hljs-number">8</span>,<span class="hljs-number">16</span>,<span class="hljs-number">32</span>,<span class="hljs-number">64</span>,<span class="hljs-number">128</span>,<span class="hljs-number">256</span>,<span class="hljs-number">512</span>,<span class="hljs-number">1024</span>,<span class="hljs-number">2048</span>&#125;;<br><span class="hljs-keyword">int</span> <span class="hljs-built_in">map</span>[<span class="hljs-number">4</span>][<span class="hljs-number">4</span>]=&#123;<span class="hljs-number">0</span>&#125;;<span class="hljs-comment">//地图默认全部为0</span><br>IMAGE img[<span class="hljs-number">15</span>];<br><span class="hljs-comment">/*****************************************************/</span><br><br><span class="hljs-comment">/*****************************************************/</span><br><span class="hljs-comment">//主函数</span><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>	initgraph(<span class="hljs-number">240</span>,<span class="hljs-number">300</span>);  <span class="hljs-comment">//创建游戏窗体</span><br>	Loadimage();<span class="hljs-comment">//加载图片资源</span><br>	DrawMap();<span class="hljs-comment">//打印一遍默认的地图</span><br>	<span class="hljs-keyword">while</span>(<span class="hljs-number">1</span>)&#123;<br>		<span class="hljs-keyword">int</span> WINNERCHECK;<br>		KeyDown();<span class="hljs-comment">//按下按键</span><br>		DrawMap();<span class="hljs-comment">//打印一遍地图</span><br>		<span class="hljs-keyword">if</span> (ScanMap() == <span class="hljs-literal">false</span>) &#123;<br>			getchar();<br>			GAMEOVER();<br>			system(<span class="hljs-string">&quot;cls&quot;</span>);<br>			<span class="hljs-comment">//putimage(0, 0, img+14);</span><br>			getchar();<br>			<span class="hljs-keyword">break</span>;<br>		&#125;<br>		WINNERCHECK= ScanMap2();<br>		<span class="hljs-keyword">if</span> (WINNERCHECK== <span class="hljs-number">1</span>) &#123; putimage(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, img + <span class="hljs-number">13</span>); <span class="hljs-keyword">break</span>; &#125;<span class="hljs-comment">//游戏获胜</span><br>	&#125;<br>	<span class="hljs-comment">//getchar();//暂停窗体</span><br>	<span class="hljs-comment">//closegraph();//关闭窗体</span><br>	system(<span class="hljs-string">&quot;pause&quot;</span>);<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><span class="hljs-comment">/*****************************************************/</span><br><br><span class="hljs-comment">/*****************************************************/</span><br><span class="hljs-comment">//画地图</span><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">DrawMap</span><span class="hljs-params">()</span></span>&#123;<span class="hljs-comment">//画地图</span><br>	setbkcolor(RGB(<span class="hljs-number">244</span>,<span class="hljs-number">215</span>,<span class="hljs-number">215</span>));  <span class="hljs-comment">//设置窗体背景颜色</span><br>	cleardevice();<span class="hljs-comment">//更新一遍窗体</span><br>	settextcolor(WHITE);<span class="hljs-comment">//设置文本数据</span><br>	settextstyle(<span class="hljs-number">30</span>,<span class="hljs-number">0</span>,<span class="hljs-string">&quot;楷体&quot;</span>);<br>	outtextxy(<span class="hljs-number">50</span>,<span class="hljs-number">10</span>,<span class="hljs-string">&quot;2048小游戏&quot;</span>);<br>	<span class="hljs-keyword">int</span> x,y,k;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i &lt; <span class="hljs-number">4</span>;i++)&#123;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>;j &lt; <span class="hljs-number">4</span>;j++)&#123;<br>			x=<span class="hljs-number">60</span>*j;<span class="hljs-comment">//列</span><br>			y=<span class="hljs-number">60</span>*i+<span class="hljs-number">60</span>;<span class="hljs-comment">//行</span><br>			<span class="hljs-comment">//printf(&quot;%d %d\n&quot;,x,y);</span><br>			<span class="hljs-keyword">for</span>(k = <span class="hljs-number">0</span>;k &lt; <span class="hljs-number">12</span>;k++)&#123;<span class="hljs-comment">//遍历12张图片</span><br>				<span class="hljs-keyword">if</span>(Imagine_number[k] == <span class="hljs-built_in">map</span>[i][j])<span class="hljs-comment">//如果图片的标号等于地图中的数据</span><br>					<span class="hljs-keyword">break</span>;<span class="hljs-comment">//退出循环</span><br>			&#125;<br>			putimage(x,y,img+k);<span class="hljs-comment">//在x,y的位置贴上第k章图</span><br>		&#125;<br>	&#125;<br>&#125;<br><span class="hljs-comment">/*****************************************************/</span><br><br><span class="hljs-comment">/*****************************************************/</span><br><span class="hljs-comment">//游戏结束</span><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">GAMEOVER</span><span class="hljs-params">()</span> </span>&#123;<br>	closegraph();<br>	initgraph(<span class="hljs-number">240</span>, <span class="hljs-number">300</span>);  <span class="hljs-comment">//创建游戏窗体</span><br>	putimage(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, img + <span class="hljs-number">12</span>);<br>	getchar();<br>&#125; <br><span class="hljs-comment">/*****************************************************/</span><br><br><span class="hljs-comment">/*****************************************************/</span><br><span class="hljs-comment">//模拟按键</span><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">KeyDown</span><span class="hljs-params">()</span></span>&#123;<br>	<span class="hljs-keyword">char</span> Key = _getch();<span class="hljs-comment">//_getch()可以从键盘接受一个字符且不需要按enter键就可以执行</span><br>	<span class="hljs-keyword">switch</span>(Key)<br>	&#123;<br>		<span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;w&#x27;</span>:<br>		<span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;W&#x27;</span>:<br>		<span class="hljs-keyword">case</span>  <span class="hljs-number">72</span>:<br>			RandNum();<span class="hljs-comment">//每次移动都会伴随着移动</span><br>			MoveUp();<br>			<span class="hljs-keyword">break</span>;<br>		<span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;s&#x27;</span>:<br>		<span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;S&#x27;</span>:<br>		<span class="hljs-keyword">case</span>  <span class="hljs-number">80</span>:<br>			RandNum();<br>			MoveDown();			<br>			<span class="hljs-keyword">break</span>;<br>		<span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;a&#x27;</span>:<br>		<span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;A&#x27;</span>: <br>		<span class="hljs-keyword">case</span> <span class="hljs-number">75</span>:<br>			RandNum();<br>			MoveLeft();		<br>			<span class="hljs-keyword">break</span>;<br>		<span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;d&#x27;</span>:<br>		<span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;D&#x27;</span>:<br>		<span class="hljs-keyword">case</span> <span class="hljs-number">77</span>:<br>			RandNum();<br>			MoveRight();		<br>			<span class="hljs-keyword">break</span>;<br>	&#125;<br>&#125;<br><span class="hljs-comment">/*****************************************************/</span><br><br><span class="hljs-comment">/*****************************************************/</span><br><span class="hljs-comment">//加载图片</span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> _CRT_SECURE_NO_WARNINGS <span class="hljs-comment">//去掉sprintf内扩增的影响</span></span><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Loadimage</span><span class="hljs-params">()</span></span>&#123;  <span class="hljs-comment">//加载所有的图片</span><br>	loadimage(img + <span class="hljs-number">12</span>, <span class="hljs-string">&quot;111.jpg&quot;</span>);<br>	loadimage(img + <span class="hljs-number">13</span>, <span class="hljs-string">&quot;12345.jpg&quot;</span>);<br>	loadimage(img + <span class="hljs-number">14</span>, <span class="hljs-string">&quot;444.jpg&quot;</span>);<br>	<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">12</span>; i++) &#123;<br>		<span class="hljs-keyword">char</span> FileName[<span class="hljs-number">200</span>]=&#123;&#125;;<br>		<span class="hljs-built_in">sprintf</span>(FileName,<span class="hljs-string">&quot;%d.jpg&quot;</span>,Imagine_number[i]);<br>		loadimage(img + i,FileName);<br>	&#125;<br>&#125;<br><span class="hljs-comment">/*****************************************************/</span><br><br><span class="hljs-comment">/*****************************************************/</span><br><span class="hljs-comment">//移动</span><br><span class="hljs-comment">//不同方向的移动</span><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">MoveRight</span><span class="hljs-params">()</span></span>&#123;<br>	<span class="hljs-keyword">bool</span> flag = <span class="hljs-literal">false</span>;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i &lt; <span class="hljs-number">4</span>;i++)&#123;  <span class="hljs-comment">//判断是否可以合并</span><br>		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">3</span>;j &gt;= <span class="hljs-number">0</span>;j--)&#123;  <br>			<span class="hljs-keyword">int</span> k = j - <span class="hljs-number">1</span>;<br>			<span class="hljs-keyword">int</span> NowKey = <span class="hljs-built_in">map</span>[i][j];<span class="hljs-comment">//取当前的元素</span><br>			<span class="hljs-keyword">if</span>(NowKey != <span class="hljs-number">0</span>)&#123; <span class="hljs-comment">// 等于0的时候再去判断是没有意义的</span><br>				<span class="hljs-keyword">while</span>(k &gt;= <span class="hljs-number">0</span>)&#123;  <span class="hljs-comment">//列指针移动</span><br>					<span class="hljs-keyword">int</span> NextKey = <span class="hljs-built_in">map</span>[i][k];<span class="hljs-comment">//取当前元素的下一个元素</span><br>					<span class="hljs-keyword">if</span>(NextKey != <span class="hljs-number">0</span>)&#123; <span class="hljs-comment">//如果下一个块已经有数据</span><br>						<span class="hljs-keyword">if</span>(NextKey == NowKey)&#123;  <span class="hljs-comment">//如果下一块和当前块的数据是相同的</span><br>							flag = <span class="hljs-literal">true</span>;<br>							<span class="hljs-built_in">map</span>[i][j]*=<span class="hljs-number">2</span>;<span class="hljs-comment">//那么就进行合并</span><br>							<span class="hljs-built_in">map</span>[i][k] = <span class="hljs-number">0</span>;<br>						&#125;<br>						<span class="hljs-comment">//k=-1;</span><br>						<span class="hljs-keyword">break</span>;  <span class="hljs-comment">//每次只能合并两个方块   </span><br>					&#125;<br>					k--;<br>				&#125;<br>			&#125;<br>		&#125;<br>	&#125;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i&lt;<span class="hljs-number">4</span>;i++)&#123;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">3</span>;j&gt;=<span class="hljs-number">0</span>;j--)&#123;<br>			<span class="hljs-keyword">int</span> nowkey = <span class="hljs-built_in">map</span>[i][j];<br>			<span class="hljs-keyword">if</span>(<span class="hljs-built_in">map</span>[i][j] == <span class="hljs-number">0</span>)&#123;<br>				<span class="hljs-keyword">int</span> k = j - <span class="hljs-number">1</span>;<br>				<span class="hljs-keyword">while</span>(k &gt;= <span class="hljs-number">0</span>)&#123;<br>					<span class="hljs-keyword">int</span> nowkeynext = <span class="hljs-built_in">map</span>[i][k];<br>					<span class="hljs-keyword">if</span>(<span class="hljs-built_in">map</span>[i][k] != <span class="hljs-number">0</span>)&#123;  <span class="hljs-comment">//如果下一个元素不等于0,那么就需要进行合并的操作</span><br>						flag = <span class="hljs-literal">true</span>;<br>						<span class="hljs-built_in">map</span>[i][j]=nowkeynext;<br>						<span class="hljs-built_in">map</span>[i][k]=<span class="hljs-number">0</span>; <span class="hljs-comment">//非0元素移动之后重新置为0</span><br>						<span class="hljs-keyword">break</span>;<br>					&#125;<br>					k--;<span class="hljs-comment">//继续去判断其他的位置</span><br>				&#125;<br>			&#125;<br>			<br>		&#125;<br>	&#125;<br>	<span class="hljs-keyword">if</span> (flag) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>	<span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> <span class="hljs-number">4</span>;<br>&#125;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">MoveLeft</span><span class="hljs-params">()</span></span>&#123;  <span class="hljs-comment">//向左走</span><br>	<span class="hljs-keyword">bool</span> flag = <span class="hljs-literal">false</span>;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i &lt; <span class="hljs-number">4</span>;i++)&#123;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>;j &lt; <span class="hljs-number">4</span>;j++)&#123;  <span class="hljs-comment">//遍历整个地图</span><br>			<span class="hljs-keyword">int</span> NowKey = <span class="hljs-built_in">map</span>[i][j];<br>			<span class="hljs-keyword">if</span>(NowKey != <span class="hljs-number">0</span>)&#123;<br>				<span class="hljs-keyword">int</span> k = j + <span class="hljs-number">1</span>;<br>				<span class="hljs-keyword">while</span>(k &lt; <span class="hljs-number">4</span>)&#123;  <span class="hljs-comment">//不可以越界</span><br>					<span class="hljs-keyword">int</span> NextKey = <span class="hljs-built_in">map</span>[i][k];<br>					<span class="hljs-keyword">if</span>(NextKey != <span class="hljs-number">0</span>)&#123; <span class="hljs-comment">//如果下一个块已经有数据</span><br>						<span class="hljs-keyword">if</span>(NextKey == NowKey)&#123;  <span class="hljs-comment">//如果下一块和当前块的数据是相同的</span><br>							flag = <span class="hljs-literal">true</span>;<br>							<span class="hljs-built_in">map</span>[i][j]*=<span class="hljs-number">2</span>;<span class="hljs-comment">//那么就进行合并</span><br>							<span class="hljs-built_in">map</span>[i][k] = <span class="hljs-number">0</span>;<br>						&#125;<br>						<span class="hljs-comment">//k=4;</span><br>						<span class="hljs-keyword">break</span>;  <span class="hljs-comment">//每次只能合并两个方块   </span><br>					&#125;<br>					k++;<br>				&#125;<br>			&#125;<br>		&#125;<br>	&#125;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i&lt;<span class="hljs-number">4</span>;i++)&#123;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>;j&lt;<span class="hljs-number">4</span>;j++)&#123;<br>			<span class="hljs-keyword">int</span> nowkey = <span class="hljs-built_in">map</span>[i][j];<br>			<span class="hljs-keyword">if</span>(<span class="hljs-built_in">map</span>[i][j] == <span class="hljs-number">0</span>)&#123;<br>				<span class="hljs-keyword">int</span> k = j + <span class="hljs-number">1</span>;<br>				<span class="hljs-keyword">while</span>(k &lt; <span class="hljs-number">4</span>)&#123;<br>					<span class="hljs-keyword">int</span> nowkeynext = <span class="hljs-built_in">map</span>[i][k];<br>					<span class="hljs-keyword">if</span>(<span class="hljs-built_in">map</span>[i][k] != <span class="hljs-number">0</span>)&#123;  <span class="hljs-comment">//如果下一个元素不等于0,那么就需要进行合并的操作</span><br>						flag = <span class="hljs-literal">true</span>;<br>						<span class="hljs-built_in">map</span>[i][j]=nowkeynext;<br>						<span class="hljs-built_in">map</span>[i][k]=<span class="hljs-number">0</span>; <span class="hljs-comment">//非0元素移动之后重新置为0</span><br>						<span class="hljs-keyword">break</span>;<br>					&#125;<br>					k++;<span class="hljs-comment">//继续去判断其他的位置</span><br>				&#125;<br>			&#125;<br>		&#125;<br>	&#125;<br>	<span class="hljs-keyword">if</span> (flag) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>	<span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> <span class="hljs-number">4</span>;<br>&#125;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">MoveUp</span><span class="hljs-params">()</span></span>&#123;<br>	<span class="hljs-keyword">bool</span> flag = <span class="hljs-literal">false</span>;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i &lt; <span class="hljs-number">4</span>;i++)&#123; <span class="hljs-comment">//i是行 j是列</span><br>		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>;j &lt; <span class="hljs-number">4</span>;j++)&#123;  <span class="hljs-comment">//遍历整个地图</span><br>			<span class="hljs-keyword">int</span> NowKey = <span class="hljs-built_in">map</span>[i][j];<br>			<span class="hljs-keyword">if</span>(<span class="hljs-built_in">map</span>[i][j] != <span class="hljs-number">0</span>)&#123;<br>				<span class="hljs-keyword">int</span> k = i + <span class="hljs-number">1</span>;<br>				<span class="hljs-keyword">while</span>(k &lt; <span class="hljs-number">4</span>)&#123;  <span class="hljs-comment">//不可以越界</span><br>					<span class="hljs-keyword">int</span> NextKey = <span class="hljs-built_in">map</span>[k][j];<span class="hljs-comment">//取相同列的下一行元素</span><br>					<span class="hljs-keyword">if</span>(NextKey != <span class="hljs-number">0</span>)&#123; <span class="hljs-comment">//如果下一个块已经有数据</span><br>						<span class="hljs-keyword">if</span>(NextKey == NowKey)&#123;  <span class="hljs-comment">//如果下一块和当前块的数据是相同的</span><br>							flag = <span class="hljs-literal">true</span>;<br>							<span class="hljs-built_in">map</span>[i][j]*=<span class="hljs-number">2</span>;<span class="hljs-comment">//那么就进行合并</span><br>							<span class="hljs-built_in">map</span>[k][j] = <span class="hljs-number">0</span>;<br>						&#125;<br>						<span class="hljs-comment">//k=4;</span><br>						<span class="hljs-keyword">break</span>;  <span class="hljs-comment">//每次只能合并两个方块   </span><br>					&#125;<br>					k++;<br>				&#125;<br>			&#125;<br>		&#125;<br>	&#125;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i&lt;<span class="hljs-number">4</span>;i++)&#123;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>;j&lt;<span class="hljs-number">4</span>;j++)&#123;<br>			<span class="hljs-keyword">int</span> nowkey = <span class="hljs-built_in">map</span>[i][j];<span class="hljs-comment">//取当前元素</span><br>			<span class="hljs-keyword">if</span>(<span class="hljs-built_in">map</span>[i][j] == <span class="hljs-number">0</span>)&#123;<br>				<span class="hljs-keyword">int</span> k = i+<span class="hljs-number">1</span>;<br>				<span class="hljs-keyword">while</span>(k &lt; <span class="hljs-number">4</span>)&#123;<br>					<span class="hljs-keyword">int</span> nowkeynext = <span class="hljs-built_in">map</span>[k][j];<span class="hljs-comment">//取相同列的下一行元素</span><br>					<span class="hljs-keyword">if</span>(<span class="hljs-built_in">map</span>[k][j] != <span class="hljs-number">0</span>)&#123;  <span class="hljs-comment">//如果下一个元素不等于0,那么就需要进行合并的操作</span><br>						flag = <span class="hljs-literal">true</span>;<br>						<span class="hljs-built_in">map</span>[i][j]=nowkeynext;<br>						<span class="hljs-built_in">map</span>[k][j]=<span class="hljs-number">0</span>; <span class="hljs-comment">//非0元素移动之后重新置为0</span><br>						<span class="hljs-keyword">break</span>;<br>					&#125;<br>					k++;<span class="hljs-comment">//继续去判断其他的位置</span><br>				&#125;<br>			&#125;<br>		&#125;<br>	&#125;<br>	<span class="hljs-keyword">if</span>(flag) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>	<span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> <span class="hljs-number">4</span>;<br>&#125;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">MoveDown</span><span class="hljs-params">()</span></span>&#123;<br>	<span class="hljs-keyword">bool</span> flag = <span class="hljs-literal">false</span>;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">3</span>;i &gt;= <span class="hljs-number">0</span>;i--)&#123; <span class="hljs-comment">//i是行 j是列</span><br>		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>;j &lt; <span class="hljs-number">4</span>;j++)&#123;  <span class="hljs-comment">//遍历整个地图</span><br>			<span class="hljs-keyword">int</span> NowKey = <span class="hljs-built_in">map</span>[i][j];<br>			<span class="hljs-keyword">if</span>(NowKey != <span class="hljs-number">0</span>)&#123;<br>				<span class="hljs-keyword">int</span> k = i - <span class="hljs-number">1</span>;<span class="hljs-comment">//</span><br>				<span class="hljs-keyword">while</span>(k &gt;= <span class="hljs-number">0</span>)&#123;  <span class="hljs-comment">//不可以越界</span><br>					<span class="hljs-keyword">int</span> NextKey = <span class="hljs-built_in">map</span>[k][j];<span class="hljs-comment">//取相同列的下一行元素</span><br>					<span class="hljs-keyword">if</span>(NextKey != <span class="hljs-number">0</span>)&#123; <span class="hljs-comment">//如果下一个块已经有数据</span><br>						<span class="hljs-keyword">if</span>(NextKey == NowKey)&#123;  <span class="hljs-comment">//如果下一块和当前块的数据是相同的</span><br>							flag = <span class="hljs-literal">true</span>;<br>							<span class="hljs-built_in">map</span>[i][j]*=<span class="hljs-number">2</span>;<span class="hljs-comment">//那么就进行合并</span><br>							<span class="hljs-built_in">map</span>[k][j] = <span class="hljs-number">0</span>;<br>						&#125;<br>						<span class="hljs-comment">//k=-1;</span><br>						<span class="hljs-keyword">break</span>;  <span class="hljs-comment">//每次只能合并两个方块   </span><br>					&#125;<br>					k--;<br>				&#125;<br>			&#125;<br>		&#125;<br>	&#125;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">3</span>;i&gt;=<span class="hljs-number">0</span>;i--)&#123;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>;j&lt;<span class="hljs-number">4</span>;j++)&#123;<br>			<span class="hljs-keyword">int</span> nowkey = <span class="hljs-built_in">map</span>[i][j];<span class="hljs-comment">//取当前元素</span><br>			<span class="hljs-keyword">if</span>(<span class="hljs-built_in">map</span>[i][j] == <span class="hljs-number">0</span>)&#123;<br>				<span class="hljs-keyword">int</span> k = i<span class="hljs-number">-1</span>;<br>				<span class="hljs-keyword">while</span>(k &gt;= <span class="hljs-number">0</span>)&#123;<br>					<span class="hljs-keyword">int</span> nowkeynext = <span class="hljs-built_in">map</span>[k][j];<span class="hljs-comment">//取相同列的下一行元素</span><br>					<span class="hljs-keyword">if</span>(<span class="hljs-built_in">map</span>[k][j] != <span class="hljs-number">0</span>)&#123;  <span class="hljs-comment">//如果下一个元素不等于0,那么就需要进行合并的操作</span><br>						flag = <span class="hljs-literal">true</span>;<br>						<span class="hljs-built_in">map</span>[i][j]=nowkeynext;<br>						<span class="hljs-built_in">map</span>[k][j]=<span class="hljs-number">0</span>; <span class="hljs-comment">//非0元素移动之后重新置为0</span><br>						<span class="hljs-keyword">break</span>;<br>					&#125;<br>					k--;<span class="hljs-comment">//继续去判断其他的位置</span><br>				&#125;<br>			&#125;<br>		&#125;<br>	&#125;<br>	<span class="hljs-keyword">if</span>(flag) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>	<span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> <span class="hljs-number">4</span>;<br>&#125;<br><span class="hljs-comment">/*****************************************************/</span><br><br><span class="hljs-comment">/*****************************************************/</span><br><span class="hljs-comment">//生成随机数</span><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">RandNum</span><span class="hljs-params">()</span></span>&#123;<span class="hljs-comment">//在地图中随机产生数字</span><br>	srand((<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span>)time(<span class="hljs-literal">NULL</span>));<br>	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i &lt; <span class="hljs-number">4</span>;i++)&#123;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>;j &lt; <span class="hljs-number">4</span>;j++)&#123;<br>			<span class="hljs-keyword">if</span>(<span class="hljs-built_in">map</span>[i][j] == <span class="hljs-number">0</span>)&#123;<br>				<span class="hljs-built_in">map</span>[i][j] = (rand()%<span class="hljs-number">3</span>)*<span class="hljs-number">2</span>;<br>				<span class="hljs-keyword">if</span>(<span class="hljs-built_in">map</span>[i][j] == <span class="hljs-number">0</span>) <span class="hljs-keyword">continue</span>;  <span class="hljs-comment">//如果产生的随机数为0  那么就在其他的区域内继续产生随机数</span><br>				<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>			&#125;<br>		&#125;<br>	&#125;<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><span class="hljs-comment">/*****************************************************/</span><br><br><span class="hljs-comment">/*****************************************************/</span><br><span class="hljs-comment">//败局判断</span><br><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">ScanMap</span><span class="hljs-params">()</span> </span>&#123;<br>	<span class="hljs-keyword">bool</span> flag = <span class="hljs-literal">false</span>;<br>	<span class="hljs-comment">/*向右走*/</span><br>	<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">4</span>; i++) &#123;  <span class="hljs-comment">//判断是否可以合并</span><br>		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">3</span>; j &gt;= <span class="hljs-number">0</span>; j--) &#123;<br>			<span class="hljs-keyword">int</span> k = j - <span class="hljs-number">1</span>;<br>			<span class="hljs-keyword">int</span> NowKey = <span class="hljs-built_in">map</span>[i][j];<span class="hljs-comment">//取当前的元素</span><br>			<span class="hljs-keyword">if</span> (NowKey != <span class="hljs-number">0</span>) &#123; <span class="hljs-comment">// 等于0的时候再去判断是没有意义的</span><br>				<span class="hljs-keyword">while</span> (k &gt;= <span class="hljs-number">0</span>) &#123;  <span class="hljs-comment">//列指针移动</span><br>					<span class="hljs-keyword">int</span> NextKey = <span class="hljs-built_in">map</span>[i][k];<span class="hljs-comment">//取当前元素的下一个元素</span><br>					<span class="hljs-keyword">if</span> (NextKey != <span class="hljs-number">0</span>) &#123; <span class="hljs-comment">//如果下一个块已经有数据</span><br>						<span class="hljs-keyword">if</span> (NextKey == NowKey) &#123;  <span class="hljs-comment">//如果下一块和当前块的数据是相同的</span><br>							flag = <span class="hljs-literal">true</span>;<br>							<span class="hljs-comment">//map[i][j] *= 2;//那么就进行合并</span><br>							<span class="hljs-comment">//map[i][k] = 0;</span><br>						&#125;<br>						<span class="hljs-comment">//k=-1;</span><br>						<span class="hljs-keyword">break</span>;  <span class="hljs-comment">//每次只能合并两个方块   </span><br>					&#125;<br>					k--;<br>				&#125;<br>			&#125;<br>		&#125;<br>	&#125;<br>	<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">4</span>; i++) &#123;<br>		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">3</span>; j &gt;= <span class="hljs-number">0</span>; j--) &#123;<br>			<span class="hljs-keyword">int</span> nowkey = <span class="hljs-built_in">map</span>[i][j];<br>			<span class="hljs-keyword">if</span> (<span class="hljs-built_in">map</span>[i][j] == <span class="hljs-number">0</span>) &#123;<br>				<span class="hljs-keyword">int</span> k = j - <span class="hljs-number">1</span>;<br>				<span class="hljs-keyword">while</span> (k &gt;= <span class="hljs-number">0</span>) &#123;<br>					<span class="hljs-keyword">int</span> nowkeynext = <span class="hljs-built_in">map</span>[i][k];<br>					<span class="hljs-keyword">if</span> (<span class="hljs-built_in">map</span>[i][k] != <span class="hljs-number">0</span>) &#123;  <span class="hljs-comment">//如果下一个元素不等于0,那么就需要进行合并的操作</span><br>						flag = <span class="hljs-literal">true</span>;<br>						<span class="hljs-comment">//map[i][j] = nowkeynext;</span><br>						<span class="hljs-comment">//map[i][k] = 0; //非0元素移动之后重新置为0</span><br>						<span class="hljs-keyword">break</span>;<br>					&#125;<br>					k--;<span class="hljs-comment">//继续去判断其他的位置</span><br>				&#125;<br>			&#125;<br><br>		&#125;<br>	&#125;<br>	<span class="hljs-comment">/*向左走*/</span><br>	<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">4</span>; i++) &#123;<br>		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; <span class="hljs-number">4</span>; j++) &#123;  <span class="hljs-comment">//遍历整个地图</span><br>			<span class="hljs-keyword">int</span> NowKey = <span class="hljs-built_in">map</span>[i][j];<br>			<span class="hljs-keyword">if</span> (NowKey != <span class="hljs-number">0</span>) &#123;<br>				<span class="hljs-keyword">int</span> k = j + <span class="hljs-number">1</span>;<br>				<span class="hljs-keyword">while</span> (k &lt; <span class="hljs-number">4</span>) &#123;  <span class="hljs-comment">//不可以越界</span><br>					<span class="hljs-keyword">int</span> NextKey = <span class="hljs-built_in">map</span>[i][k];<br>					<span class="hljs-keyword">if</span> (NextKey != <span class="hljs-number">0</span>) &#123; <span class="hljs-comment">//如果下一个块已经有数据</span><br>						<span class="hljs-keyword">if</span> (NextKey == NowKey) &#123;  <span class="hljs-comment">//如果下一块和当前块的数据是相同的</span><br>							flag = <span class="hljs-literal">true</span>;<br>							<span class="hljs-comment">///map[i][j] *= 2;//那么就进行合并</span><br>							<span class="hljs-comment">//map[i][k] = 0;</span><br>						&#125;<br>						<span class="hljs-comment">//k=4;</span><br>						<span class="hljs-keyword">break</span>;  <span class="hljs-comment">//每次只能合并两个方块   </span><br>					&#125;<br>					k++;<br>				&#125;<br>			&#125;<br>		&#125;<br>	&#125;<br>	<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">4</span>; i++) &#123;<br>		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; <span class="hljs-number">4</span>; j++) &#123;<br>			<span class="hljs-keyword">int</span> nowkey = <span class="hljs-built_in">map</span>[i][j];<br>			<span class="hljs-keyword">if</span> (<span class="hljs-built_in">map</span>[i][j] == <span class="hljs-number">0</span>) &#123;<br>				<span class="hljs-keyword">int</span> k = j + <span class="hljs-number">1</span>;<br>				<span class="hljs-keyword">while</span> (k &lt; <span class="hljs-number">4</span>) &#123;<br>					<span class="hljs-keyword">int</span> nowkeynext = <span class="hljs-built_in">map</span>[i][k];<br>					<span class="hljs-keyword">if</span> (<span class="hljs-built_in">map</span>[i][k] != <span class="hljs-number">0</span>) &#123;  <span class="hljs-comment">//如果下一个元素不等于0,那么就需要进行合并的操作</span><br>						flag = <span class="hljs-literal">true</span>;<br>						<span class="hljs-comment">//map[i][j] = nowkeynext;</span><br>						<span class="hljs-comment">//map[i][k] = 0; //非0元素移动之后重新置为0</span><br>						<span class="hljs-keyword">break</span>;<br>					&#125;<br>					k++;<span class="hljs-comment">//继续去判断其他的位置</span><br>				&#125;<br>			&#125;<br>		&#125;<br>	&#125;<br>	<span class="hljs-comment">/*向上走*/</span><br>	<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">4</span>; i++) &#123; <span class="hljs-comment">//i是行 j是列</span><br>		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; <span class="hljs-number">4</span>; j++) &#123;  <span class="hljs-comment">//遍历整个地图</span><br>			<span class="hljs-keyword">int</span> NowKey = <span class="hljs-built_in">map</span>[i][j];<br>			<span class="hljs-keyword">if</span> (<span class="hljs-built_in">map</span>[i][j] != <span class="hljs-number">0</span>) &#123;<br>				<span class="hljs-keyword">int</span> k = i + <span class="hljs-number">1</span>;<br>				<span class="hljs-keyword">while</span> (k &lt; <span class="hljs-number">4</span>) &#123;  <span class="hljs-comment">//不可以越界</span><br>					<span class="hljs-keyword">int</span> NextKey = <span class="hljs-built_in">map</span>[k][j];<span class="hljs-comment">//取相同列的下一行元素</span><br>					<span class="hljs-keyword">if</span> (NextKey != <span class="hljs-number">0</span>) &#123; <span class="hljs-comment">//如果下一个块已经有数据</span><br>						<span class="hljs-keyword">if</span> (NextKey == NowKey) &#123;  <span class="hljs-comment">//如果下一块和当前块的数据是相同的</span><br>							flag = <span class="hljs-literal">true</span>;<br>							<span class="hljs-comment">//map[i][j] *= 2;//那么就进行合并</span><br>							<span class="hljs-comment">//map[k][j] = 0;</span><br>						&#125;<br>						<span class="hljs-comment">//k=4;</span><br>						<span class="hljs-keyword">break</span>;  <span class="hljs-comment">//每次只能合并两个方块   </span><br>					&#125;<br>					k++;<br>				&#125;<br>			&#125;<br>		&#125;<br>	&#125;<br>	<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">4</span>; i++) &#123;<br>		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; <span class="hljs-number">4</span>; j++) &#123;<br>			<span class="hljs-keyword">int</span> nowkey = <span class="hljs-built_in">map</span>[i][j];<span class="hljs-comment">//取当前元素</span><br>			<span class="hljs-keyword">if</span> (<span class="hljs-built_in">map</span>[i][j] == <span class="hljs-number">0</span>) &#123;<br>				<span class="hljs-keyword">int</span> k = i + <span class="hljs-number">1</span>;<br>				<span class="hljs-keyword">while</span> (k &lt; <span class="hljs-number">4</span>) &#123;<br>					<span class="hljs-keyword">int</span> nowkeynext = <span class="hljs-built_in">map</span>[k][j];<span class="hljs-comment">//取相同列的下一行元素</span><br>					<span class="hljs-keyword">if</span> (<span class="hljs-built_in">map</span>[k][j] != <span class="hljs-number">0</span>) &#123;  <span class="hljs-comment">//如果下一个元素不等于0,那么就需要进行合并的操作</span><br>						flag = <span class="hljs-literal">true</span>;<br>						<span class="hljs-comment">//map[i][j] = nowkeynext;</span><br>						<span class="hljs-comment">//map[k][j] = 0; //非0元素移动之后重新置为0</span><br>						<span class="hljs-keyword">break</span>;<br>					&#125;<br>					k++;<span class="hljs-comment">//继续去判断其他的位置</span><br>				&#125;<br>			&#125;<br>		&#125;<br>	&#125;<br>	<span class="hljs-comment">/*向下走*/</span><br>	<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">3</span>; i &gt;= <span class="hljs-number">0</span>; i--) &#123; <span class="hljs-comment">//i是行 j是列</span><br>		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; <span class="hljs-number">4</span>; j++) &#123;  <span class="hljs-comment">//遍历整个地图</span><br>			<span class="hljs-keyword">int</span> NowKey = <span class="hljs-built_in">map</span>[i][j];<br>			<span class="hljs-keyword">if</span> (NowKey != <span class="hljs-number">0</span>) &#123;<br>				<span class="hljs-keyword">int</span> k = i - <span class="hljs-number">1</span>;<span class="hljs-comment">//</span><br>				<span class="hljs-keyword">while</span> (k &gt;= <span class="hljs-number">0</span>) &#123;  <span class="hljs-comment">//不可以越界</span><br>					<span class="hljs-keyword">int</span> NextKey = <span class="hljs-built_in">map</span>[k][j];<span class="hljs-comment">//取相同列的下一行元素</span><br>					<span class="hljs-keyword">if</span> (NextKey != <span class="hljs-number">0</span>) &#123; <span class="hljs-comment">//如果下一个块已经有数据</span><br>						<span class="hljs-keyword">if</span> (NextKey == NowKey) &#123;  <span class="hljs-comment">//如果下一块和当前块的数据是相同的</span><br>							flag = <span class="hljs-literal">true</span>;<br>							<span class="hljs-comment">//map[i][j] *= 2;//那么就进行合并</span><br>							<span class="hljs-comment">//map[k][j] = 0;</span><br>						&#125;<br>						<span class="hljs-comment">//k=-1;</span><br>						<span class="hljs-keyword">break</span>;  <span class="hljs-comment">//每次只能合并两个方块   </span><br>					&#125;<br>					k--;<br>				&#125;<br>			&#125;<br>		&#125;<br>	&#125;<br>	<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">3</span>; i &gt;= <span class="hljs-number">0</span>; i--) &#123;<br>		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; <span class="hljs-number">4</span>; j++) &#123;<br>			<span class="hljs-keyword">int</span> nowkey = <span class="hljs-built_in">map</span>[i][j];<span class="hljs-comment">//取当前元素</span><br>			<span class="hljs-keyword">if</span> (<span class="hljs-built_in">map</span>[i][j] == <span class="hljs-number">0</span>) &#123;<br>				<span class="hljs-keyword">int</span> k = i - <span class="hljs-number">1</span>;<br>				<span class="hljs-keyword">while</span> (k &gt;= <span class="hljs-number">0</span>) &#123;<br>					<span class="hljs-keyword">int</span> nowkeynext = <span class="hljs-built_in">map</span>[k][j];<span class="hljs-comment">//取相同列的下一行元素</span><br>					<span class="hljs-keyword">if</span> (<span class="hljs-built_in">map</span>[k][j] != <span class="hljs-number">0</span>) &#123;  <span class="hljs-comment">//如果下一个元素不等于0,那么就需要进行合并的操作</span><br>						flag = <span class="hljs-literal">true</span>;<br>						<span class="hljs-comment">//map[i][j] = nowkeynext;</span><br>						<span class="hljs-comment">//map[k][j] = 0; //非0元素移动之后重新置为0</span><br>						<span class="hljs-keyword">break</span>;<br>					&#125;<br>					k--;<span class="hljs-comment">//继续去判断其他的位置</span><br>				&#125;<br>			&#125;<br>		&#125;<br>	&#125;<br>	<span class="hljs-keyword">if</span> (flag == <span class="hljs-literal">false</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>	<span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>&#125;<br><span class="hljs-comment">/*****************************************************/</span><br><br><span class="hljs-comment">/*****************************************************/</span><br><span class="hljs-comment">//胜局判断</span><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">ScanMap2</span><span class="hljs-params">()</span> </span>&#123;<br>	<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">3</span>; i++) &#123;<br>		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; <span class="hljs-number">3</span>; j++) &#123;<br>			<span class="hljs-keyword">if</span> (<span class="hljs-built_in">map</span>[i][j] == <span class="hljs-number">2048</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;<br>		&#125;<br>	&#125;<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><span class="hljs-comment">/*****************************************************/</span><br></code></pre></td></tr></table></figure>
+
+<h1 id="五、总结"><a href="#五、总结" class="headerlink" title="五、总结"></a>五、总结</h1><p>&emsp;&emsp;进工作室以来第一次写小游戏。这一次写小游戏的过程中收获到了不少新东西：<br>&emsp;&emsp;&emsp;&emsp;1、<strong>Easyx的图形库的使用</strong><br>&emsp;&emsp;&emsp;&emsp;2、随机数的生成<br>&emsp;&emsp;&emsp;&emsp;3、_getch()和getchar()的区别<br>&emsp;&emsp;&emsp;&emsp;4、sprintf()的用法以及其不安全性<br>&emsp;&emsp;学会了Easyx的图形库以后可以学习做其他的小游戏。然后感觉自己还是有很多不会的东西。图书管理系统写了一小半但是感觉没有API的话写出来也没什么意思，等以后学了Java再继续完成吧。这学期剩下的时间好好复习的同时学习一点Linux服务器的知识，看能不能做出一个属于自己的博客吧！<br>&emsp;&emsp;冲冲冲！</p>
+
+    </div>
+</div>
+<style>
+    #noneimg img {
+        display: none;
+        z-index: 109;
+        width: 600px !important;
+        border-radius: 0px;
+        position: fixed;
+        box-shadow: 0 0 0px #c3c3c300 !important;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto !important;
+    }
+
+    @media screen and (max-width:600px) {
+        #noneimg img {
+            width: 88%
+        }
+    }
+</style>
+<script>
+    $(function () { $('#article').click(function (e) { if (e.target.tagName == "IMG") { if ($('#nonediv').length == 0) { let MImg = `<div id='noneimg'><img src='${e.target.currentSrc}'></div>`; let MDiv = "<div id='nonediv' style='cursor: pointer;display: none; position: fixed;left: 0;top: 0; right: 0;bottom: 0;background-color: #333;opacity:0.5;z-index: 108;'></div>"; $('#article').append(MDiv); $('#article').append(MImg); $("#nonediv").fadeIn("slow"); $("#noneimg img").fadeIn("slow") } } else { if ($('#nonediv').length !== 0) { $("#noneimg ").fadeOut("slow"); $("#nonediv").fadeOut("slow"); setTimeout(function () { $('#nonediv').remove(); $('#noneimg').remove() }, 500) } } }); $('.article-content').addClass('content-move') });
+</script>
+<div class="Last-Next">
+    
+    <a href="/2020/12/11/my-first-blog/">
+        <div class="last">
+            <span>上一篇</span>
+            <p>这是我的第一篇博客</p>
+        </div>
+    </a>
+    
+
+    
+</div>
+		
+<link rel="stylesheet" href="/css/food.css">
+
+<div class="footer">
+	<div class="Copyright">
+		©2020 By CHANGEQ. 主题：<a
+			style="text-decoration: none;display: contents; color: #898F9F;"
+			target="_blank" rel="noopener" href="https://github.com/qiaobug/hexo-theme-quiet">Quiet</a>
+	</div>
+	<div class="contact">
+		
+		<a target="_blank" rel="noopener" href="https://github.com/qiaobug">
+			<img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
+		</a>
+		
+	</div>
+</div>
+
+<script src="/js/jquery.min.js"></script>
+
+
+<script src="/js/gotop.js"></script>
+
+
+<style type="text/css">
+    @media screen and (min-width: 600px) {
+        .goTop>span {
+            display: block;
+            border-radius: 50%;
+            width: 66px;
+            height: 66px;
+            cursor: pointer;
+            opacity: 0.8;
+            background: rgba(18, 24, 58, 0.06);
+            text-align: center;
+            border: 1px solid rgba(18, 24, 58, 0.06);
+
+            transition: border .5s;
+            -moz-transition: border .5s;
+            /* Firefox 4 */
+            -webkit-transition: border .5s;
+            /* Safari 和 Chrome */
+            -o-transition: border .5s;
+            /* Opera */
+        }
+
+        .goTop>span:hover {
+            border: 1px solid #6680B3;
+        }
+
+
+        .goTop {
+            position: fixed;
+            right: 30px;
+            bottom: 80px;
+        }
+
+        .goTop>span>svg {
+            width: 30px;
+            height: 30px;
+            margin-top: 17.5px;
+            opacity: 0.7;
+        }
+
+    }
+
+    @media screen and (max-width: 600px) {
+        .goTop {
+            display: none;
+        }
+    }
+</style>
+<div class="goTop" id="js-go_top">
+    <span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <g>
+                <path d="M13 12v8h-2v-8H4l8-8 8 8z"></path>
+            </g>
+        </svg>
+    </span>
+</div>
+<script>
+    $('#js-go_top').gotoTop({ offset: 500, speed: 300, animationShow: { 'transform': 'translate(0,0)', 'transition': 'transform .5s ease-in-out' }, animationHide: { 'transform': 'translate(100px,0)', 'transition': 'transform .5s ease-in-out' } });
+</script>
+<script>
+	console.log('\n %c Hexo-Quiet 主题 %c https://github.com/QiaoBug/hexo-theme-quiet \n', 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; padding:5px 0;')
+</script>
+	</body>
+
+</html>
