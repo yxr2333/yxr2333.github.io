@@ -3,14 +3,15 @@
 
 	<head>
 		
-<title>爱学习的小喻-yxr</title>
+<title>借助Git搭建博客-yxr</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" type="image/x-icon" href="/image/favicon.ico">
 
-<meta name="keywords" content="乔越博客,个人博客,hexo">
-<meta name="description" content="描述">
+
+<meta name="keywords" content="Github,Git,summary,">
+<meta name="description" content="">
 
 
 <script src="/js/jquery.min.js"></script>
@@ -20,8 +21,13 @@
 
 	<body>
 		
+<link rel="stylesheet" href="/css/page.css">
 
-<link rel="stylesheet" href="/css/archive.css">
+
+<link rel="stylesheet" href="/css/page_cente.css">
+
+
+<link rel="stylesheet" href="/css/atom-one-dark.css">
 
 
 <link rel="stylesheet" href="/css/header.css">
@@ -44,7 +50,7 @@
 				
 				
 				
-				<li class="select">
+				<li>
 					<a href="/archives">ARCHIVE</a>
 					<span class="dot"></span>
 				</li>
@@ -222,68 +228,113 @@
 <script>
 	$(function () { $(window).scroll(function () { if ($(document).scrollTop() > 100) { $(".header-top").removeClass("header-move2"); $('.header-top').addClass('header-move1') } else { $(".header-top").removeClass("header-move1"); $('.header-top').addClass('header-move2') } }) });
 </script>
-
-<div class="header-bg">
+<div class="header-bg ">
     <div class="bg-content">
-        <span>
-            <img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imgicon-remixicon.svg" alt="Q">
-        </span>
-
-        <h2>居然用了 1 年一共才写了 7 篇文章!</h2>
+        <ul class="tag">
+            
+            
+            <li><a href="/tags/Github">Github</a></li>
+            
+            <li><a href="/tags/Git">Git</a></li>
+            
+            <li><a href="/tags/summary">summary</a></li>
+            
+            
+        </ul>
+        <h1>借助Git搭建博客</h1>
+        <div class="article-info">
+            <div class="article-author">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                    <g>
+                        <path fill="#12183A"
+                            d="M6.187 15.265A6.47 6.47 0 0 0 10 16.5a6.47 6.47 0 0 0 3.813-1.235A4.99 4.99 0 0 0 10 13.5a4.99 4.99 0 0 0-3.813 1.765zM5.082 14.25A6.485 6.485 0 0 1 10 12c1.965 0 3.726.872 4.918 2.25a6.5 6.5 0 1 0-9.836 0zM10 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0-1.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z">
+                        </path>
+                    </g>
+                </svg>
+                
+                <span> <a href="">Xinrui Yu</a></span>
+                <p>2020-12-12 20:40:57</p>
+            </div>
+        </div>
     </div>
 </div>
 <div class="article-content">
     <div id="article" class="content">
-        
-        <p>
-            2020
-        </p>
-        
-        <a href="/2020/12/12/github4/">
-            <span>如何使用Github托管文件夹？</span>
-            <time>12-12</time>
-        </a>
-        
-        <a href="/2020/12/12/github3/">
-            <span>如何在Github上上传大文件?</span>
-            <time>12-12</time>
-        </a>
-        
-        <a href="/2020/12/12/github2/">
-            <span>如何创建SSH密钥？</span>
-            <time>12-12</time>
-        </a>
-        
-        <a href="/2020/12/12/github/">
-            <span>借助Git搭建博客</span>
-            <time>12-12</time>
-        </a>
-        
-        <a href="/2020/12/11/sousuo/">
-            <span>迷宫中的BFS和DFS问题</span>
-            <time>12-11</time>
-        </a>
-        
-        <a href="/2020/12/11/SmallGame/">
-            <span>启明星工作室秋季结业作品:2048小游戏</span>
-            <time>12-11</time>
-        </a>
-        
-        <a href="/2020/12/10/Dayplan/">
-            <span>每周计划与周总结</span>
-            <time>12-10</time>
-        </a>
-        
-        
+        <h1 id="借助Git搭建博客"><a href="#借助Git搭建博客" class="headerlink" title="借助Git搭建博客"></a>借助Git搭建博客</h1><p><strong>学习来源</strong>：<a target="_blank" rel="noopener" href="https://aoboxia.github.io/2019/10/15/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">https://aoboxia.github.io/2019/10/15/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</a></p>
+<p><strong>学习作品</strong>：<a target="_blank" rel="noopener" href="https://yxr2333.github.io/">https://yxr2333.github.io/</a></p>
+<p><del><strong>Github是代码托管仓库</strong></del></p>
+<p><del><strong>Git是一种工具</strong></del></p>
+<figure class="highlight verilog"><table><tr><td class="code"><pre><code class="hljs verilog">在本地运行hexo网站的操作<br>右键网站所在文件夹 使用Git Bash打开<br>hexo clean<span class="hljs-comment">//清空缓存</span><br>hexo <span class="hljs-keyword">generate</span><span class="hljs-comment">//根据markdown生成相应的资源文件</span><br>hexo server<span class="hljs-comment">//在本地运行hexo服务</span><br>在本地运行起hexo服务以后，我们可以在浏览器中使用 http:<span class="hljs-comment">//localhost:4000 进入我们的博客页面</span><br></code></pre></td></tr></table></figure>
+
+
+
+<p>1、从本地更新网站配置： hexo g -d</p>
+<p>2、更新主题配置：在网站文件夹根目录中找到themes，双击进入。打开 _config.yml 文件 修改其中相应的配置信息即可</p>
+<p>3、新建一篇博客</p>
+<figure class="highlight dos"><table><tr><td class="code"><pre><code class="hljs dos">右键网站的文件夹，使用Git Bash打开<br>输入hexo new &quot;博客名&quot;<br>然后此时就可以在source/_posts目录下看到刚刚创建的 &quot;博客名&quot;.<span class="hljs-built_in">md</span>文件<br>之后就只用在这个<span class="hljs-built_in">md</span>文件中使用markdown编写即可<br>编写完成后 hexo g -d 同步到Github上即可发布一篇新博客<br><br>似乎此<span class="hljs-built_in">md</span>文件并不能使用中文字符，会导致其他配置文件出现乱码错误最后进行同步<br>其实<span class="hljs-built_in">md</span>文件也不用使用中文名字，只用在<span class="hljs-built_in">title</span>中输入我们想要的名字就可以了<br></code></pre></td></tr></table></figure>
+
+<p>4、新博客的格式规范</p>
+<p>​    titile: xxxx</p>
+<p>​    categoried: xxxx   —-&gt;类别</p>
+<p>​    date: xxxx        ———&gt;日期</p>
+<p>​    tags:                  ———&gt;标签</p>
+<p>​            - xxx </p>
+<p>​    excerpt: xxx      ——–&gt;介绍</p>
+<p>5、使用账号密码登录Github</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">deploy:</span><br>	<span class="hljs-attr">type:</span> <span class="hljs-string">&#x27;git&#x27;</span><br>	<span class="hljs-attr">repo:</span> <span class="hljs-string">https://github.com/yxr2333/yxr2333.github.io.git</span>  <span class="hljs-comment">#Github仓库的Https地址</span><br>	<span class="hljs-attr">branch:</span> <span class="hljs-string">master</span><br><span class="hljs-comment"># 这样会使用账号密码进行登录，每次登录都需要输入账号和密码</span><br></code></pre></td></tr></table></figure>
+
+
+
+<p>6、使用SSH密钥登录Github</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">deploy:</span><br>	<span class="hljs-attr">type:</span> <span class="hljs-string">&#x27;git&#x27;</span><br>	<span class="hljs-attr">repo:</span> <span class="hljs-string">git@github.com:yxr2333/yxr2333.github.io.git</span>  <span class="hljs-comment">#Github仓库的SSH地址</span><br>	<span class="hljs-attr">branch:</span> <span class="hljs-string">master</span><br><span class="hljs-comment"># 这样操作的话就会需要创建一个SSH密钥并在设置中上传此密钥，具体操作见如何创建SSH密钥</span><br></code></pre></td></tr></table></figure>
+
+
     </div>
 </div>
+<style>
+    #noneimg img {
+        display: none;
+        z-index: 109;
+        width: 600px !important;
+        border-radius: 0px;
+        position: fixed;
+        box-shadow: 0 0 0px #c3c3c300 !important;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto !important;
+    }
 
-
-
-
+    @media screen and (max-width:600px) {
+        #noneimg img {
+            width: 88%
+        }
+    }
+</style>
 <script>
-    $(function () { $('.article-content').addClass('content-move'); })
+    $(function () { $('#article').click(function (e) { if (e.target.tagName == "IMG") { if ($('#nonediv').length == 0) { let MImg = `<div id='noneimg'><img src='${e.target.currentSrc}'></div>`; let MDiv = "<div id='nonediv' style='cursor: pointer;display: none; position: fixed;left: 0;top: 0; right: 0;bottom: 0;background-color: #333;opacity:0.5;z-index: 108;'></div>"; $('#article').append(MDiv); $('#article').append(MImg); $("#nonediv").fadeIn("slow"); $("#noneimg img").fadeIn("slow") } } else { if ($('#nonediv').length !== 0) { $("#noneimg ").fadeOut("slow"); $("#nonediv").fadeOut("slow"); setTimeout(function () { $('#nonediv').remove(); $('#noneimg').remove() }, 500) } } }); $('.article-content').addClass('content-move') });
 </script>
+<div class="Last-Next">
+    
+    <a href="/2020/12/12/github2/">
+        <div class="last">
+            <span>上一篇</span>
+            <p>如何创建SSH密钥？</p>
+        </div>
+    </a>
+    
+
+    
+    <a href="/2020/12/11/sousuo/">
+        <div class="next">
+            <span>下一篇</span>
+            <p>迷宫中的BFS和DFS问题</p>
+        </div>
+    </a>
+    
+</div>
 		
 <link rel="stylesheet" href="/css/food.css">
 
