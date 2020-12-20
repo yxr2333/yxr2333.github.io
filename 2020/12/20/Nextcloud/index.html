@@ -3,14 +3,14 @@
 
 	<head>
 		
-<title>如何使用Github托管文件夹？-yxr</title>
+<title>Nextcloud-yxr</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" type="image/x-icon" href="/image/favicon.ico">
 
 
-<meta name="keywords" content="Github,Git,summary,">
+<meta name="keywords" content="-web -cloud,">
 <meta name="description" content="">
 
 
@@ -233,15 +233,11 @@
         <ul class="tag">
             
             
-            <li><a href="/tags/Github">Github</a></li>
-            
-            <li><a href="/tags/Git">Git</a></li>
-            
-            <li><a href="/tags/summary">summary</a></li>
+            <li><a href="/tags/-web -cloud">-web -cloud</a></li>
             
             
         </ul>
-        <h1>如何使用Github托管文件夹？</h1>
+        <h1>Nextcloud</h1>
         <div class="article-info">
             <div class="article-author">
                 
@@ -254,53 +250,41 @@
                 </svg>
                 
                 <span> <a href="">Xinrui Yu</a></span>
-                <p>2020-12-12 20:46:24</p>
+                <p>2020-12-20 11:40:48</p>
             </div>
         </div>
     </div>
 </div>
 <div class="article-content">
     <div id="article" class="content">
-        <h1 id="如何使用Github托管文件夹？"><a href="#如何使用Github托管文件夹？" class="headerlink" title="如何使用Github托管文件夹？"></a>如何使用Github托管文件夹？</h1><p><strong>一、首先在桌面上新建文件夹</strong></p>
-<p><strong>二、右键使用Git Bash打开</strong></p>
-<p><strong>三、初始化</strong></p>
-<figure class="highlight nginx"><table><tr><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">git</span> init<br></code></pre></td></tr></table></figure>
-
-
-
-<p><strong>四、将文件add到缓存区(stage)</strong></p>
-<figure class="highlight nginx"><table><tr><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">git</span> add <span class="hljs-string">&quot;filename&quot;</span><br></code></pre></td></tr></table></figure>
-
-
-
-<p><strong>五、将文件commit到本地仓库</strong></p>
-<figure class="highlight nginx"><table><tr><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">git</span> commit -m <span class="hljs-string">&#x27;备注信息&#x27;</span><br><br><br><span class="hljs-comment"># commit会将暂存区里所有的文件都上传本地仓库(respository)中</span><br><br><span class="hljs-comment"># 如果没有在commit后面添加备注信息，那么会自动打开一个txt文档让用户使用vim编辑器添加备注信息</span><br><br></code></pre></td></tr></table></figure>
-
-
-
-<p><strong>六、关联本地仓库</strong></p>
-<figure class="highlight nginx"><table><tr><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">git</span> remote add origin git@github.com:用户名/仓库名.git<br><br><span class="hljs-comment">#用户名：Github的用户名</span><br><span class="hljs-comment">#仓库名：该文件夹对应的GitHub仓库名</span><br></code></pre></td></tr></table></figure>
-
-
-
-<p><strong>七、push到远程仓库</strong></p>
-<figure class="highlight nginx"><table><tr><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">git</span> push -u origin master<br><br><span class="hljs-comment"># 如果上述操作报错  可以执行以下命令👇</span><br>git pull --rebase origin master<br><span class="hljs-comment"># 然后再执行  </span><br>git push -u origin master<br><br></code></pre></td></tr></table></figure>
-
-
-
-<p><strong><del>会遇到的问题：</del></strong></p>
-<p><strong>1、如果需要上传大文件怎么办？</strong></p>
-<p>​    <strong>解决方法</strong>：上传的文件如果大于100M那么就需要下载git lts 软件来上传</p>
-<p><strong>2、如何查看缓存区中有哪些文件？</strong></p>
-<p>​    <strong>解决方法</strong>：输入命令  git cherry -v 即可查询到</p>
-<p><strong>3、如果add后想取消上传该如何处理？</strong></p>
-<p>​    <strong>解决方法</strong>：输入命令 git reset HEAD~，就可以取消上传了。如果想再次上传，只需要再执行一次commit操作就可以了</p>
-<p><strong>4、常用的指令</strong></p>
-<p>​    git init    初始化</p>
-<p>​    git add    添加进暂存区</p>
-<p>​    git commit    上传到本地仓库</p>
-<p>​    git push -u orgin master    上传到github仓库</p>
-<p>​    git cherry -v    查看本地仓库中暂时还未上传的</p>
+        <hr>
+<p><strong>项目：nextcloud云盘</strong></p>
+<p><strong>成品：</strong><a href="">mycloud.iloveyxr.top</a></p>
+<hr>
+<p>最近尝试的，在服务器上尝试搭建一个 类似于百度云的 **个人云盘 **</p>
+<p><strong>效果还可以，<del>毕竟类似于一种傻瓜式的操作</del></strong></p>
+<p>上传速度倒是还可以，取决于个人的网速</p>
+<p>但是下载速度就让我知道：<strong>还真的不能怪某度云</strong></p>
+<p>这玩意儿速度真的上不来</p>
+<p><strong>下面说说遇到的问题吧</strong></p>
+<hr>
+<h1 id="1、搭建的过程"><a href="#1、搭建的过程" class="headerlink" title="1、搭建的过程"></a>1、搭建的过程</h1><p>参考知乎文章：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/38485411">https://zhuanlan.zhihu.com/p/38485411</a></p>
+<p><del>大致分为以下几个步骤</del></p>
+<p>1、搭建 LNMP环境 (nginx+php+mysql+linux)</p>
+<p>2、<a target="_blank" rel="noopener" href="https://download.nextcloud.com/server/installer/setup-nextcloud.php">下载nextcloud安装文件</a></p>
+<p>3、推荐使用宝塔面板），点击创建网站</p>
+<p>​    <del>ps:如果是使用ip访问的话可以设置为默认站点</del>。</p>
+<p>4、将安装文件上传到网站的目录下面</p>
+<p>5、访问<a target="_blank" rel="noopener" href="http://yourip/setup-nextcloud.php%E6%9D%A5%E8%AE%BE%E7%BD%AE%E4%BD%A0%E7%9A%84%E7%AE%A1%E7%90%86%E5%91%98%E4%BF%A1%E6%81%AF">http://yourip/setup-nextcloud.php来设置你的管理员信息</a></p>
+<p><del>数据库默认是SQLite，不用设置，但如果是使用SQl数据库的话就要输入数据库名之类的信息了</del></p>
+<h2 id="2、遇到的问题"><a href="#2、遇到的问题" class="headerlink" title="2、遇到的问题"></a>2、遇到的问题</h2><p><strong>1、给网站设置二级域名</strong></p>
+<p>​        首先在阿里云的域名管理那解析好一个<strong>二级域名</strong>（如何解析可以百度一下，比如我的域名就是<a target="_blank" rel="noopener" href="http://47.102.198.114/nextcloud/index.php/">mycloud.iloveyxr.top</a>）</p>
+<p>​        然后在宝塔面板里面把域名添加到你的网站里面去，之后就可以通过域名访问网站了</p>
+<p><strong>2、404 not found nginx</strong></p>
+<p>​        在宝塔面板里面点击域名跳转的时候发现会提示 <del>404 not found nginx</del>, 但是在浏览器中输入域名却是可以正常访问的，可能是涉及到了底层的一些知识，目前还不是很清楚具体的原因是什么，在哪里出错了。</p>
+<p><strong>3、通过域名访问的时候提示该域名不安全</strong></p>
+<p>​        这是因为Nextcloud有一个可以访问的名单，在网站的目录下有/nextcloud/config/config.php,编辑这个文件，在array后面按照格式添加自己的域名就可以了。</p>
+<p><img src="https://i.loli.net/2020/12/20/JdtTUAiZ7goLVuK.png" alt="QQ截图20201220113932.png"></p>
 
     </div>
 </div>
@@ -330,19 +314,12 @@
 </script>
 <div class="Last-Next">
     
-    <a href="/2020/12/20/Nextcloud/">
-        <div class="last">
-            <span>上一篇</span>
-            <p>Nextcloud</p>
-        </div>
-    </a>
-    
 
     
-    <a href="/2020/12/12/github3/">
+    <a href="/2020/12/12/github4/">
         <div class="next">
             <span>下一篇</span>
-            <p>如何在Github上上传大文件?</p>
+            <p>如何使用Github托管文件夹？</p>
         </div>
     </a>
     
